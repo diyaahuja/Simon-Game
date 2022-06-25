@@ -76,7 +76,7 @@ function handler() {
     checkAnswer(userClickedPattern.lastIndexOf(userChosenColour))
 }
 
-$(document).on("keypress", function () {
+$(document).on("keydown", function () {
     if (!gameStarted) {
         setTimeout(function () {
             nextSequence();
@@ -84,12 +84,5 @@ $(document).on("keypress", function () {
     }
 });
 
-$(document).on("click", function () {
-    if (!gameStarted) {
-        setTimeout(function () {
-            nextSequence();
-        }, 500);
-    }
-});
 
 $(".btn").click(handler);
