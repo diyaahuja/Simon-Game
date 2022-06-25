@@ -84,4 +84,12 @@ $(document).on("keypress", function () {
     }
 });
 
+$(document).on("click", function () {
+    if (!gameStarted) {
+        setTimeout(function () {
+            nextSequence();
+        }, 500);
+    }
+});
+
 $(".btn").click(handler);
